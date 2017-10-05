@@ -8,25 +8,30 @@ public class BasicLevel1016 {
 		// TODO Auto-generated method stub
 		Scanner s=new Scanner(System.in);
 		String[] s1 = s.nextLine().split(" ");
-		int num = Integer.parseInt(s1[0]);
-		int low = Integer.parseInt(s1[1]);
-		int high = Integer.parseInt(s1[2]);
-		int[][] arrs1 = new int[num][];
-		int[][] arrs2 = new int[num][];
-		int[][] arrs3 = new int[num][];
-		int[][] arrs4 = new int[num][];
-		for(int i = 0 ; i < num ; i++)
+
+		int i1 = Integer.parseInt(s1[0]);
+		int i2 = Integer.parseInt(s1[1]);
+		int num1 = 0;
+		int i3 = Integer.parseInt(s1[2]);
+		int i4 = Integer.parseInt(s1[3]);
+		int num2 = 0;
+		while(i1 > 0)
 		{
-			s1 = s.nextLine().split(" ");
-			int virtue = Integer.parseInt(s1[1]);
-			int ability = Integer.parseInt(s1[2]);
-			int[] arr = {virtue,ability,virtue+ability};
-			if(virtue > high && ability > high)
+			if(i1 % 10 == i2)
 			{
-				arrs1[i] = arr;
+				num1 = num1 * 10 + i2;
 			}
-			
-			
+			i1 = i1 / 10;
 		}
+		while(i3 > 0)
+		{
+			if(i3 % 10 == i4)
+			{
+				num2 = num2 * 10 + i4;
+			}
+			i3 = i3 / 10;
+		}
+
+		System.out.print(num1 + num2);
 	}
 }
